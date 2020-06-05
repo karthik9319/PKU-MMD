@@ -97,8 +97,7 @@ def plot_fig(lst, ratio, ground, method):
 def f1(lst, ratio, ground):
 	cos_map, count_map, positive = match(lst, ratio, ground)
 	precision, recall = calc_pr(positive, len(lst), len(ground))
-	score = 2*precision*recall/(precision+recall)
-	return score
+	return 2*precision*recall/(precision+recall)
 
 # Interpolated Average Precision:
 #	@lst: list of proposals(label, start, end, confidence, video_name)
